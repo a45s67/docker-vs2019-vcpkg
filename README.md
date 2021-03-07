@@ -31,7 +31,7 @@
 1. [Docker: “no matching manifest for windows/amd64 in the manifest list entries”](https://stackoverflow.com/questions/48066994/docker-no-matching-manifest-for-windows-amd64-in-the-manifest-list-entries)
 2. [Error response from daemon: open \\.\pipe\docker_engine_linux: The system cannot find the file specified.](https://github.com/docker/for-win/issues/4495)
 3. ['docker build' error: "failed to solve with frontend dockerfile.v0"](https://github.com/docker/buildx/issues/415)
-4. [failed to load LLB: runtime execution on platform linux/arm64 not supported](https://github.com/docker/buildx/issues/138)
+4. [failed to load LLB: runtime execution on platform linux/arm64 not supported](https://github.com/docker/buildx/issues/138)  
 有比較常見的幾種狀況，一種是Dockerfile的大小寫，如果是linux container似乎是case sensitive，所以file name要注意(我也不知道大寫還小寫哪個是對的就是)。  
 另外一種是用linux container抓windows的image，我的部分就是這種狀況(1.)，不知為啥我一開始是用linux container在跑(可能我一開始沒開hyperV)，這時候在工作列上的docker圖示點右鍵，switch windows container就好。.......-.-...哭阿!!  
 2.和3.4.基本上是相關的問題大補帖，狀況因人而異...看起來是個大坑  
