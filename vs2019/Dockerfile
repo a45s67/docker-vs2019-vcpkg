@@ -6,7 +6,7 @@ FROM ${FROM_IMAGE}
 
 SHELL ["cmd", "/S", "/C"]
 
-
+# Please download vs_BuildTools.exe from the microsoft page first! Then put it in the working dir.
 ADD vs_BuildTools.exe C:\TEMP\vs_buildtools.exe
 RUN start /wait C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache `
     --add Microsoft.VisualStudio.Workload.MSBuildTools `
