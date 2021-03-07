@@ -1,0 +1,1 @@
+# docker-vs2019-vcpkg
