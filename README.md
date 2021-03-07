@@ -2,7 +2,7 @@
 
 
 ### docker desktop開不起來
-["Docker Desktop is starting..." forever](https://github.com/docker/for-win/issues/5261):  
+["Docker Desktop is starting..." forever](https://github.com/docker/for-win/issues/5261) : 
 在這部分，我是把`%ProgramFiles%\Docker\Docker\resources`下的`com.docker.proxy.exe`,`vpnkit.exe`等等都納入防火牆的例外，  
 接著一切都解決了，再也不會開2,3分鐘，然後開好就自動stop。(測試環境:家裡桌機)。  
 (工作筆電尚未測試)
@@ -12,17 +12,17 @@
 [Container Base Images](https://docs.microsoft.com/zh-tw/virtualization/windowscontainers/manage-containers/container-base-images)  
 
 ### 基本設定  
-[Get started: Prep Windows for containers](https://docs.microsoft.com/zh-tw/virtualization/windowscontainers/quick-start/set-up-environment?tabs=Windows-Server)  
+[Get started: Prep Windows for containers](https://docs.microsoft.com/zh-tw/virtualization/windowscontainers/quick-start/set-up-environment?tabs=Windows-Server) : 
 新手教學，感覺有蠻重要的概念，先留著之後再看
 
-[Docker Engine on Windows](https://docs.microsoft.com/en-us/virtualization/windowscontainers/manage-docker/configure-docker-daemon):  
+[Docker Engine on Windows](https://docs.microsoft.com/en-us/virtualization/windowscontainers/manage-docker/configure-docker-daemon) : 
 這部分很重要，我就是沒有仔細的看完，才有了後面的踩雷(和無意義的查資料時間)。  
 
 ### vs_buildtools的package id table
 [Visual Studio Build Tools component directory](https://docs.microsoft.com/zh-tw/visualstudio/install/workload-component-id-vs-build-tools?view=vs-2019#c-build-tools)
 
 ### vs_buildtools下了--wait卻根本不會wait就回shell了
-[https://developercommunity.visualstudio.com/t/setup-does-not-wait-for-installation-to-complete-w/26668](Setup does not wait for installation to complete when "--wait" parameter is used)
+[Setup does not wait for installation to complete when "--wait" parameter is used](https://developercommunity.visualstudio.com/t/setup-does-not-wait-for-installation-to-complete-w/26668) : 
 請用與call相關概念的function呼叫vs_buildtools.exe，像是powershell中Start-Process，或是cmd中的start。(debug半天的我: ......)  
 
 
@@ -40,7 +40,7 @@
 
 
 ### 錯誤碼 5003，以及網路相關問題
-[Out of the box docker creation is not working](https://github.com/microsoft/vs-dockerfiles/issues/5):  
+[Out of the box docker creation is not working](https://github.com/microsoft/vs-dockerfiles/issues/5) : 
 簡單說就是dns要設，configuration json加上`"dns": ["8.8.8.8"]` 。就是這個害我灌了2天都灌不起來，哭阿  
 > 正常來說，使用vs_buildtools.exe是看不到錯誤碼的，
 > 要看到錯誤碼請搭配使用collector.exe，
@@ -53,9 +53,9 @@
 
 
 ### 硬碟空間不夠，想換image預設存放的path
-[dockerd daemon](https://docs.docker.com/engine/reference/commandline/dockerd/):  
+[dockerd daemon](https://docs.docker.com/engine/reference/commandline/dockerd/) : 
 configuration json加上`"data-root":"D:\\docker"`  
-[\[Docker\] 修改 Docker image 預設存放位置](https://marcus116.blogspot.com/2019/03/change-download-docker-image-path.html)
+[\[Docker\] 修改 Docker image 預設存放位置](https://marcus116.blogspot.com/2019/03/change-download-docker-image-path.html) : 
 比較特別的是，這篇是在configuration json加上`"graph":"D:\\docker"`，不知道"data-root"和"graph"差在哪(待查證)。  
 
 
