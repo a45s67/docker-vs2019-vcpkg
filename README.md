@@ -44,7 +44,7 @@
 簡單說就是dns要設，configuration json加上`"dns": ["8.8.8.8"]` 。就是這個害我灌了2天都灌不起來，哭阿  
 > 正常來說，使用vs_buildtools.exe是看不到錯誤碼的，
 > 要看到錯誤碼請搭配使用collector.exe，
-> 請參考
+> 請參考[Using MSVC in a Docker Container for Your C++ Projects](https://devblogs.microsoft.com/cppblog/using-msvc-in-a-docker-container-for-your-c-projects/)以及這篇的[github sample](https://github.com/Microsoft/vs-Dockerfiles)。
 
 延伸閱讀 :  
 - [Windows container networking](https://docs.microsoft.com/en-gb/virtualization/windowscontainers/container-networking/architecture)
