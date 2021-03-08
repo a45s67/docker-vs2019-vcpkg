@@ -3,9 +3,12 @@
 
 ### docker desktop開不起來
 ["Docker Desktop is starting..." forever](https://github.com/docker/for-win/issues/5261) : 
+測試環境-家裡桌機:  
 在這部分，我是把`%ProgramFiles%\Docker\Docker\resources`下的`com.docker.proxy.exe`,`vpnkit.exe`等等都納入防火牆的例外，  
-接著一切都解決了，再也不會開2,3分鐘，然後開好就自動stop。(測試環境:家裡桌機)。  
-(工作筆電尚未測試)
+接著一切都解決了，再也不會開2,3分鐘，然後一start後就自動stop。  
+
+測試環境-工作筆電:  
+也是開了超久，但不一樣的是，連start都沒有直接timeout，到vm裡再灌一次，發現也是開不起來，不過vm的stack trace log裡倒是有噴一個明顯錯誤，就是wsl2無法正常開之類的，忽然想到我本機的wsl default version可能是不對的，`--set-default-version 2` 後發現啥問題都沒了...神奇，`wsl -l -v`看到的docker相關的兩個distribution明明就是wsl2版，沒想到`default-version`還要一起也固定。
 
 
 ### 如何選擇base image(windows)
